@@ -37,9 +37,16 @@ dependencies {
 // https://mvnrepository.com/artifact/com.h2database/h2
     testImplementation group: 'com.h2database', name: 'h2', version: '2.1.212'
 
+// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '${junitVersion}'
+
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
+    implementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.9.0-M1'
+
 }
 
 test {

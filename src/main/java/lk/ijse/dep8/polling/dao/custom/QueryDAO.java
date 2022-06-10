@@ -1,4 +1,11 @@
 package lk.ijse.dep8.polling.dao.custom;
 
-public interface QueryDAO {
+import lk.ijse.dep8.polling.dao.SuperDAO;
+
+import javax.persistence.EntityManager;
+
+public interface QueryDAO extends SuperDAO {
+
+
+
 }
