@@ -1,5 +1,7 @@
 package lk.ijse.dep8.polling.entity;
 
-public interface SuperEntity {
+import java.io.Serializable;
+
+public interface SuperEntity extends Serializable {
 
 }
