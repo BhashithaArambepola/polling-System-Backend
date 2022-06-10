@@ -2,7 +2,6 @@ package lk.ijse.dep8.polling.dao;
 
 import lk.ijse.dep8.polling.entity.SuperEntity;
 
-import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Optional;
@@ -13,13 +12,13 @@ T save(T entity);
 
 void deleteById(ID pk);
 
-Optional<T> findById(Id pk);
+Optional<T> findById(int pk);
 
 List<T> findAll();
 
 long count();
 
-boolean existsById(Id pk);
+boolean existsById(int pk);
 
 
 }

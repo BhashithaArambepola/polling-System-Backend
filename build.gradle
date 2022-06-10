@@ -22,11 +22,10 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
-    implementation 'org.projectlombok:lombok:1.18.22'
     compileOnly('javax.servlet:javax.servlet-api:4.0.1')
 
-    // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
     implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.6.9.Final'
+    implementation group: 'org.eclipse', name: 'yasson', version: '2.0.1'
 
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
@@ -34,20 +33,14 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.24'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
 
-// https://mvnrepository.com/artifact/com.h2database/h2
-    testImplementation group: 'com.h2database', name: 'h2', version: '2.1.212'
-
-// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
     testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '${junitVersion}'
 
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
-
-    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
-    implementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.9.0-M1'
-
+    testImplementation group: 'com.h2database', name: 'h2', version: '2.1.212'
 }
+
 
 test {
     useJUnitPlatform()

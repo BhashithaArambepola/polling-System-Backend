@@ -3,7 +3,6 @@ package lk.ijse.dep8.polling.dao;
 import lk.ijse.dep8.polling.entity.SuperEntity;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Id;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
@@ -30,7 +29,7 @@ public abstract class CrudDAOImpl<T extends SuperEntity, ID extends Serializable
     }
 
     @Override
-    public Optional<T> findById(Id pk) {
+    public Optional<T> findById(int pk) {
     T entity=em.find(entityClzObj,pk);
     return entity == null? Optional.empty(): Optional.of(entity);
 
@@ -49,7 +48,7 @@ public abstract class CrudDAOImpl<T extends SuperEntity, ID extends Serializable
     }
 
     @Override
-    public boolean existsById(Id pk) {
+    public boolean existsById(int pk) {
         return findById(pk).isPresent();
     }
 }

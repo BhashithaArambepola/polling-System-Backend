@@ -2,8 +2,8 @@ package lk.ijse.dep8.polling.dao.custom.impl;
 
 import lk.ijse.dep8.polling.dao.custom.PollDAO;
 import lk.ijse.dep8.polling.entity.Poll;
+//import lk.ijse.dep8.polling.service.util.JPAUtil;
 import lk.ijse.dep8.polling.serice.util.JPAUtil;
-
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -12,8 +12,6 @@ import javax.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -107,7 +105,6 @@ class PollDAOImplTest {
         /* When */
         pollDAO.deleteById(poll.getId());
         /* Then */
-        assertThrows(AssertionError.class, ()-> existsById(poll));
+        assertThrows(AssertionError.class, () -> existsById(poll));
     }
-
 }
