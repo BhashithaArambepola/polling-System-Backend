@@ -1,4 +1,4 @@
-package lk.ijse.dep8.polling.serice.util;
+package lk.ijse.dep8.polling.service.util;
 
 import org.junit.jupiter.api.Test;
 

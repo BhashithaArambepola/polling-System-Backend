@@ -1,4 +1,4 @@
-package lk.ijse.dep8.polling.serice.util;
+package lk.ijse.dep8.polling.service.util;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

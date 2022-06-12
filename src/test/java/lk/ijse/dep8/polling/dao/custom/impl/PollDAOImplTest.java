@@ -3,7 +3,7 @@ package lk.ijse.dep8.polling.dao.custom.impl;
 import lk.ijse.dep8.polling.dao.custom.PollDAO;
 import lk.ijse.dep8.polling.entity.Poll;
 //import lk.ijse.dep8.polling.service.util.JPAUtil;
-import lk.ijse.dep8.polling.serice.util.JPAUtil;
+import lk.ijse.dep8.polling.service.util.JPAUtil;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
